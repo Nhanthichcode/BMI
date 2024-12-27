@@ -83,3 +83,46 @@ function tinhToan(_txt_A, _txt_B) {
   _txt_ketqua.value = kq.toFixed(3);
 }
 //#endregion
+//#region div_3
+const _txt_soN = document.getElementById(`txt_soN`);
+const _txt_ketqua_div_3 = document.getElementById(`txt_ketqua_div3`);
+const _btn_thuchien_div3 = document.getElementById(`btn_tinh`);
+const _btn_lamlai_div3 = document.getElementById(`btn_lamlai_div3`);
+const _rdb_array = document.getElementById(`rdb_array`);
+const _rdb_dequy = document.getElementById(`rdb_dequy`);
+_btn_lamlai_div3.addEventListener(`click`, () => {
+  _txt_soN.value = "";
+  _txt_ketqua_div_3.value = "";
+});
+_btn_thuchien_div3.addEventListener(`click`, () => {
+  thuchien();
+  console.log("Div 3");
+});
+function thuchien() {
+  let soN = parseFloat(_txt_soN.value);
+  if (isNaN(soN) || soN <= 0) {
+    alert("Nhập lại 1 số tự nhiên >0");
+    _txt_soN.value = "";
+    return;
+  } else {
+    if (_rdb_array.checked) {
+      let ar = [];
+      for (let i = 0; i < soN; i++) {
+        ar[i] = (Math.random() * 10 + 1).toFixed(2);
+      }
+      _txt_ketqua_div_3.value = ar.join(", ");
+      console.log(ar.join(", "));
+    } else if (_rdb_dequy.checked) {
+      _txt_ketqua_div_3.value = `Đệ quy của ${soN} = ${_deQuy(soN)}`;
+    }
+  }
+}
+function _deQuy(n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    console.log(n);
+    return n * _deQuy(n - 1);
+  }
+}
+//#region
