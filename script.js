@@ -71,6 +71,14 @@ function tinhToan(_txt_A, _txt_B) {
   let a = parseFloat(_txt_A.value);
   let b = parseFloat(_txt_B.value);
   let kq = 0;
+  if (isNaN(a) || isNaN(b)) {
+    alert(`Nhập lại số hoàn chỉnh nào !!!`);
+    return;
+  }
+  if (a <= 0 || b <= 0) {
+    alert(`Nhập lại số > 0 nào !`);
+    return;
+  }
   if (_rdb_c.checked) {
     kq = a + b;
   } else if (_rdb_t.checked) {
@@ -125,4 +133,4 @@ function _deQuy(n) {
     return n * _deQuy(n - 1);
   }
 }
-//#region
+//#endregion
