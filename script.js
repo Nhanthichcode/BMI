@@ -1,3 +1,4 @@
+//#region div_1
 const _txt_height = document.getElementById(`txt_height`);
 const _txt_weight = document.getElementById(`txt_weight`);
 const _txt_yoursName = document.getElementById(`txt_yoursName`);
@@ -45,3 +46,40 @@ function _tinh(_BMI) {
   }
   console.log(`Hoàn thành`);
 }
+//#endregion
+//#region div_2
+const _btnThuchien = document.getElementById(`btn_thuchien`);
+const _btnLamlai = document.getElementById(`btn_lamlai_div`);
+const _txt_A = document.getElementById(`txt_numnerA`);
+const _txt_B = document.getElementById(`txt_numnerB`);
+const _txt_ketqua = document.getElementById(`txt_ketqua`);
+const _rdb_c = document.getElementById(`rdb_C`);
+const _rdb_t = document.getElementById(`rdb_T`);
+const _rdb_n = document.getElementById(`rdb_N`);
+const _rdb_ch = document.getElementById(`rdb_Ch`);
+
+_btnLamlai.addEventListener(`click`, () => {
+  _txt_A.value = "";
+  _txt_B.value = "";
+  _txt_ketqua.value = "";
+});
+_btnThuchien.addEventListener(`click`, () => {
+  tinhToan(_txt_A, _txt_B);
+  console.log(`bạn đã nhấn nút thực hiện`);
+});
+function tinhToan(_txt_A, _txt_B) {
+  let a = parseFloat(_txt_A.value);
+  let b = parseFloat(_txt_B.value);
+  let kq = 0;
+  if (_rdb_c.checked) {
+    kq = a + b;
+  } else if (_rdb_t.checked) {
+    kq = a - b;
+  } else if (_rdb_n.checked) {
+    kq = a * b;
+  } else if (_rdb_ch.checked) {
+    kq = a / b;
+  }
+  _txt_ketqua.value = kq.toFixed(3);
+}
+//#endregion

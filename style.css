@@ -1,5 +1,10 @@
+.div_1 {
+  width: 200px;
+  height: 300px;
+  background-color: beige;
+}
 .btn {
-  background-color: antiquewhite;
+  background-color: rgb(218, 237, 95);
   color: blue;
   border-radius: 999px;
   margin-left: 15px;
@@ -26,7 +31,7 @@
 .txt:hover {
   background-image: linear-gradient(
     to right,
-    rgb(65, 7, 18),
+    rgb(200, 112, 128),
     rgb(52, 74, 217),
     rgb(225, 163, 167),
     rgb(223, 187, 77)
@@ -35,4 +40,73 @@
 #p_hr {
   width: 100px;
   display: block;
+}
+#div_2 {
+  width: 350px;
+  height: 300px;
+  margin-bottom: 10px;
+  background-color: rgb(167, 222, 238);
+  margin-top: 100px;
+}
+#rdb_div {
+  display: inline;
+  color: aliceblue;
+  margin-top: 40px;
+  margin: 65px;
+
+  background-color: red;
+}
+.btn_div2 {
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: rgb(114, 228, 112);
+  color: rgb(225, 42, 42);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 21px;
+}
+.btn_div2:hover {
+  transition: 4s;
+  background-image: linear-gradient(to left, red, blue, pink, yellow);
+}
+.btn_div2:active {
+  background-color: greenyellow;
+}
+#txt_ketqua {
+  margin: 10px;
+}
+#div_3 {
+  padding-left: 10px;
+  display: block;
+  position: absolute;
+  left: 190px;
+  top: 0px;
+  margin: 30px;
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(
+    to right,
+    rgb(232, 143, 143),
+    rgb(215, 118, 213),
+    rgb(213, 241, 144)
+  );
+}
+#txt_soN {
+  margin-bottom: 20px;
+}
+.btndiv3 {
+  margin: 20px;
+  background-color: orange;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.btndiv3:hover {
+  color: aliceblue;
+  background-image: linear-gradient(to left, blue, green, pink);
+}
+.rdb_div3 {
+  margin-top: 10px;
+}
+.rdb_div3:hover {
+  color: blue;
 }

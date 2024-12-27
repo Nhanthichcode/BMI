@@ -7,26 +7,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h3>Chỉ Số BMI</h3>
-
-    <!-- <p><textarea id="txt_yoursName">Hãy cho tôi biết tên của bạn</textarea></p> -->
-    <p>
-      <textarea id="txt_height" class="txt txt_1">
-Nhập Chiều cao vào đây</textarea
-      >
-    </p>
-    <p>
-      <textarea id="txt_weight" class="txt txt_2">
-Nhập Cân nặng vào đây</textarea
-      >
-    </p>
-    <p id="p_hr"><hr /></p>
-    <p>
-      <label style="color: rgb(223, 61, 88)">Kết quả:</label>
-      <input type="text" id="txt_Result" value="" />
-    </p>
-    <button id="btn_Start" class="btn btn_tinh">Tính</button>
-    <button id="btn_Reset" class="btn btn_reset">Làm lại</button>
+    <div class="div_1" Tính BMI>
+      <h3>Chỉ Số BMI</h3>
+      <p>
+        <label>Chiều cao:</label>
+        <textarea id="txt_height" class="txt">Nhập Chiều cao vào đây</textarea>
+      </p>
+      <p>
+        <label>Cân nặng:</label>
+        <textarea id="txt_weight" class="txt">Nhập Cân nặng vào đây</textarea>
+      </p>
+      <p id="p_hr"><hr /></p>
+      <p>
+        <label style="color: rgb(223, 61, 88)">Kết quả:</label>
+        <input type="text" id="txt_Result" value="" />
+      </p>
+      <button id="btn_Start" class="btn btn_tinh">Tính</button>
+      <button id="btn_Reset" class="btn btn_reset">Làm lại</button>
+    </div>
+    <div id="div_2" Tính toán đơn giản>
+      <label for="div_2">Máy tính NGU</label><br>
+      <label for="txtA">Nhập vào số thứ nhất:</label><br>
+      <input type="text" class="txt2 txtA" id="txt_numnerA" size="1">
+      <br>
+      <label for="txtB">Nhập vào số thứ hai:</label><br>
+      <input type="text" class="txt2 txtB" id="txt_numnerB" size="1"><br>
+      <div id="rdb_div">
+        <input type="radio" name="rdb " id="rdb_C" value="Cộng">Cộng
+        <input type="radio" name="rdb " id="rdb_T" value="Trừ">Trừ
+        <input type="radio" name="rdb " id="rdb_N" value="Nhân">Nhân
+        <input type="radio" name="rdb " id="rdb_Ch" value="Chia">Chia
+      </div><br>
+      <label for="txt_ketqua">Kết quả:</label>
+      <input type="text" id="txt_ketqua" size="4px"><br>
+      <input type="button" value="Thực hiện" class="btn_div2" id="btn_thuchien">
+      <input type="button" value="Làm lại" class="btn_div2" id="btn_lamlai_div"><br>
+    </div>
+    <div id="div_3" tính đệ quy, mảng>
+      <h2>Đệ quy - Mảng</h2>
+      <label for="txt_soN">Nhấp số N:</label>
+      <input type="text" id="txt_soN" size="3"><br>
+      <input type="text" id="txt_ketqua_div3" size="15"><br>
+      <input type="radio" name="radio_div3" class="rdb_div3" id="rdb_array" value="rdb array">Mảng n ptử
+      <input type="radio" name="radio_div3" class="rdb_div3" id="rdb_dequy" value="rdb đệ quy">Đệ quy
+      <button class="btndiv3 btn_tinh">Thực hiện</button>
+      <button class="btndiv3 btn_lamlai_div3">Làm lại</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
