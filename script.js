@@ -25,6 +25,18 @@ _btn_Reset.addEventListener("click", () => {
 function _tinhBmi(txt_height, txt_weight) {
   let height = parseFloat(txt_height.value);
   let weight = parseFloat(txt_weight.value);
+  if (isNaN(height) || isNaN(weight)) {
+    alert(`Nhập đầy đủ thông tin để tính toán`);
+    return;
+  }
+  if (height <= 0 || weight <= 0) {
+    alert(`Chiều cao và cân nặng phải > 0, nhập lại đi`);
+    return;
+  }
+  if (height < 100) {
+    alert(`Chiều cao của bạn là ${height / 100}m hả?, nhập lại`);
+    return;
+  }
   height = height / 100;
   let _BMI = weight / Math.pow(height, 2);
   _tinh(_BMI.toFixed(3));
@@ -72,11 +84,7 @@ function tinhToan(_txt_A, _txt_B) {
   let b = parseFloat(_txt_B.value);
   let kq = 0;
   if (isNaN(a) || isNaN(b)) {
-    alert(`Nhập lại số hoàn chỉnh nào !!!`);
-    return;
-  }
-  if (a <= 0 || b <= 0) {
-    alert(`Nhập lại số > 0 nào !`);
+    alert(`Hãy nhập số vào ô !!!`);
     return;
   }
   if (_rdb_c.checked) {
@@ -86,6 +94,11 @@ function tinhToan(_txt_A, _txt_B) {
   } else if (_rdb_n.checked) {
     kq = a * b;
   } else if (_rdb_ch.checked) {
+    if (b <= 0) {
+      _txt_BB.value = "";
+      alert(`${a} Không thể chia hết cho 0, hãy nhập số khác`);
+      return;
+    }
     kq = a / b;
   }
   _txt_ketqua.value = kq.toFixed(3);
