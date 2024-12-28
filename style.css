@@ -72,9 +72,6 @@
 .btn_div2:active {
   background-color: greenyellow;
 }
-#txt_ketqua {
-  margin: 10px;
-}
 #div_3 {
   padding-left: 10px;
   display: block;
@@ -94,13 +91,13 @@
 #txt_soN {
   margin-bottom: 20px;
 }
-.btndiv3 {
+.div3 {
   margin: 20px;
   background-color: orange;
   border-radius: 20px;
   transition: 0.4s;
 }
-.btndiv3:hover {
+.div3:hover {
   color: aliceblue;
   background-image: linear-gradient(to left, blue, green, pink);
 }
