@@ -147,3 +147,63 @@ function _deQuy(n) {
   }
 }
 //#endregion
+// #region div_4
+const _div4_btnthuchien = document.getElementById(`btn_ketqua_div4`);
+const _div4_txt_input = document.getElementById(`txt_input_thang`);
+const txt_ketqua_div4 = document.getElementById(`txt_ketqua_div4`);
+
+-_div4_btnthuchien.addEventListener(`click`, () => {
+  TinhSoNgay();
+});
+function TinhSoNgay() {
+  let month = parseInt(_div4_txt_input.value);
+  if (isNaN(month) || month <= 0) {
+    console.log(`bạn đã nhấn tính ngày trong năm !!`);
+    alert(`Nhập vào 1 số nguyên lớn hơn 0`);
+    return;
+  }
+  if (month > 12) {
+    alert(`Tháng ${month} không tồn tại !!`);
+    return;
+  }
+  switch (month) {
+    case 1:
+      alert(`Tháng ${month} không tồn tại !!`);
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+    case 2:
+      txt_ketqua_div4.value = `Tháng ${month} có 29 ngày`;
+      break;
+    case 3:
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+    case 4:
+      txt_ketqua_div4.value = `Tháng ${month} có 30 ngày`;
+      break;
+    case 5:
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+    case 6:
+      txt_ketqua_div4.value = `Tháng ${month} có 30 ngày`;
+      break;
+    case 7:
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+    case 8:
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+    case 9:
+      txt_ketqua_div4.value = `Tháng ${month} có 30 ngày`;
+      break;
+    case 10:
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+    case 11:
+      txt_ketqua_div4.value = `Tháng ${month} có 30 ngày`;
+      break;
+    case 12:
+      txt_ketqua_div4.value = `Tháng ${month} có 31 ngày`;
+      break;
+  }
+}
+//#endregion

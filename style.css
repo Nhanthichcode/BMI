@@ -110,3 +110,11 @@
 .rdb_div3:hover {
   color: blue;
 }
+.div_4 {
+  width: 300px;
+  height: 200px;
+  display: block;
+  margin-top: 20px;
+  padding: auto;
+  background-color: aqua;
+}
